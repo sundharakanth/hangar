@@ -14,7 +14,7 @@ matrix:
   #Ignore for words starting and ending with colon
   - pyspelling.filters.context:
       context_visible_first: true
-      escapes: ':\S+?:'
+      escapes: '^\:\w+\:.*$'
   #Ignore for directory path
   - pyspelling.filters.context: 
       context_visible_first: true
