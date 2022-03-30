@@ -5,12 +5,16 @@ matrix:
     d: en_US
   sources:
   - documentation/*.asciidoc
-  #dictionary:
-  #  wordlists:
-  #  - en-devonfw.dict
-  #  output:  en-devonfw.dic
+  dictionary:
+    wordlists:
+    - en-devonfw.dict
+    output:  en-devonfw.dic
   pipeline:
   - pyspelling.filters.url:
+  #Ignore for words starting and ending with colon
+  - pyspelling.filters.context:
+      context_visible_first: true
+      escapes: '/:\S+?:/g'
   #Ignore for directory path
   - pyspelling.filters.context: 
       context_visible_first: true
