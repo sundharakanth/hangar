@@ -15,7 +15,8 @@ matrix:
   - pyspelling.filters.python:
   - pyspelling.filters.context:
       context_visible_first: true
-      escapes: '^\:\w+\:.*$'
+      escapes: '^/:\S+?:$'
+      #escapes: '^\:\w+\:.*$'
       #delimiters:
       # Ignore text between inline back ticks
       #- open: '(?P<open>:+)'
