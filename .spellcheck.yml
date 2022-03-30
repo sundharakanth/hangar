@@ -10,17 +10,17 @@ matrix:
     - en-devonfw.dict
     output:  en-devonfw.dic
   pipeline:
-  - pyspelling.filters.url:
   #Ignore for words starting and ending with colon
   - pyspelling.filters.python:
   - pyspelling.filters.context:
       context_visible_first: true
-      escapes: '^/:\S+?:$'
+      escapes: ':\S+?:'
       #escapes: '^\:\w+\:.*$'
       #delimiters:
       # Ignore text between inline back ticks
       #- open: '(?P<open>:+)'
       #  close: ':'
+  - pyspelling.filters.url:
   #Ignore for directory path
   - pyspelling.filters.context: 
       context_visible_first: true
