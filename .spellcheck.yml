@@ -19,7 +19,7 @@ matrix:
       delimiters:
       # Ignore text between inline back ticks
       - open: '(?P<open>:+)'
-        close: '(?P=open)'
+        close: ':'
   #Ignore for directory path
   - pyspelling.filters.context: 
       context_visible_first: true
