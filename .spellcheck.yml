@@ -16,10 +16,10 @@ matrix:
   - pyspelling.filters.context:
       context_visible_first: true
       escapes: '^\:\w+\:.*$'
-      delimiters:
+      #delimiters:
       # Ignore text between inline back ticks
-      - open: '(?P<open>:+)'
-        close: ':'
+      #- open: '(?P<open>:+)'
+      #  close: ':'
   #Ignore for directory path
   - pyspelling.filters.context: 
       context_visible_first: true
